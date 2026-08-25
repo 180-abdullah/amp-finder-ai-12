@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+.verify-venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# User-obtained source data are intentionally not redistributed.
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Real trained outputs can be regenerated; the toy artifact is kept for smoke tests.
+models/*
+!models/demo_baseline_rf.joblib
+!models/README.md
+outputs/*
+!outputs/README.md

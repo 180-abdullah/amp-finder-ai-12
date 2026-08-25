@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this educational project, cite the repository and the primary data/model sources listed in the README."
+title: "AMP Finder AI Research Edition: An Explainable Antimicrobial-Peptide Screening Platform"
+type: software
+version: 2.0.0
+date-released: 2026-08-25
+authors:
+  - family-names: "[Your family name]"
+    given-names: "[Your given name]"
+license: MIT
+repository-code: "https://github.com/YOUR-USERNAME/amp-finder-ai"
+keywords:
+  - antimicrobial peptides
+  - machine learning
+  - protein language model
+  - ESM-2
+  - bioinformatics
+  - research software
+  - antimicrobial resistance
+references:
+  - type: article
+    title: "APD3: the antimicrobial peptide database as a tool for research and education"
+    doi: "10.1093/nar/gkv1278"
+  - type: article
+    title: "The UniProt website API: facilitating programmatic access to protein knowledge"
+    doi: "10.1093/nar/gkaf394"
+  - type: article
+    title: "Evolutionary-scale prediction of atomic-level protein structure with a language model"
+    doi: "10.1126/science.ade2574"
+  - type: article
+    title: "DOME: recommendations for supervised machine learning validation in biology"
+    doi: "10.1038/s41592-021-01205-4"

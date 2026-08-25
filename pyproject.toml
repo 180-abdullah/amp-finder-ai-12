@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amp-finder-ai"
+version = "2.0.0"
+description = "Research-facing, explainable machine-learning platform for antimicrobial-peptide screening"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+  "numpy>=1.26,<2.5",
+  "pandas>=2.1,<3",
+  "biopython>=1.83,<2",
+  "scikit-learn>=1.4,<2",
+  "rapidfuzz>=3.6,<4",
+  "joblib>=1.3,<2",
+  "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.40,<2", "plotly>=5.24,<7"]
+esm = ["torch>=2.2,<3", "transformers>=4.41,<6", "safetensors>=0.4,<1"]
+notebooks = ["matplotlib>=3.8,<4", "seaborn>=0.13,<1", "jupyter>=1.0,<2"]
+dev = ["pytest>=8,<10", "nbformat>=5.10,<6", "nbclient>=0.10,<1", "ipykernel>=6.29,<8"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+filterwarnings = [
+  "ignore:Implicit None on return values is deprecated and will raise KeyErrors\\.:DeprecationWarning:importlib\\.metadata",
+]
